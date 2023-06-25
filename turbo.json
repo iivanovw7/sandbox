@@ -1,0 +1,32 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                "build/dist/**"
+            ]
+        },
+        "lint": {},
+        "stub": {},
+        "test": {},
+        "clean": {
+            "cache": false
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "release": {
+            "dependsOn": [
+                "^release"
+            ],
+            "outputMode": "new-only"
+        }
+    },
+    "globalDotEnv": [
+        ".env"
+    ]
+}

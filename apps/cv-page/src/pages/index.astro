@@ -1,0 +1,15 @@
+---
+import React from 'react';
+
+import { APP_CONFIG } from '@/shared/config';
+import Base from '@/templates/Base.astro';
+import { Content, Hero } from '@/widgets';
+
+const { title } = APP_CONFIG;
+const { description } = APP_CONFIG;
+---
+
+    <Base head={{ description, title }}>
+        <Hero />
+        <Content />
+    </Base>

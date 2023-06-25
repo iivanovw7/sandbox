@@ -1,0 +1,19 @@
+---
+import React from 'react';
+
+import { BlogPost, Page } from '@/shared/components';
+import { APP_CONFIG } from '@/shared/config';
+import type { BlogCollectionEntry } from '@/shared/types';
+import Base from '@/templates/Base.astro';
+
+const { content } = Astro.props as { content: BlogCollectionEntry };
+const { description, title } = content;
+
+---
+    <Base head={{ description, title: `${String(title)} - ${APP_CONFIG.siteName}` }}>
+        <Page>
+            <BlogPost content={content}>
+                <slot></slot>
+            </BlogPost>
+        </Page>
+    </Base>

@@ -1,0 +1,32 @@
+---
+import React from 'react';
+
+import { Page } from '@/shared/components';
+import { APP_CONFIG } from '@/shared/config';
+import { Footer, Navbar } from '@/widgets';
+
+import '@/shared/styles/base.css';
+
+const {
+    head: { description, title },
+} = Astro.props;
+---
+
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+            <title>{title}</title>
+            <meta content={description} name="description" />
+            <meta content={APP_CONFIG.author} name="author" />
+            <link href="/rss.xml" rel="alternate" type="application/rss+xml" />
+            <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+        </head>
+        <body>
+            <Navbar />
+            <Page>
+                <slot></slot>
+            </Page>
+            <Footer />
+        </body>
+    </html>

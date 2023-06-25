@@ -1,0 +1,9 @@
+---
+import React from 'react';
+
+import Base from '@/templates/Base.astro';
+import { Alpha } from '@/widgets';
+---
+    <Base head={{ description: 'Alpha energy reports viewer', title: 'Energy reports' }}>
+        <Alpha client:load />
+    </Base>

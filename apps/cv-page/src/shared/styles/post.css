@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    a:not(#header-logo) {
+        @apply font-medium;
+        @apply dark:text-cyan-600;
+        @apply hover:underline;
+    }
+
+    .post-content code {
+        @apply rounded-md;
+        @apply mt-2;
+        @apply mb-2;
+        @apply px-2 py-1;
+        @apply font-semibold;
+        @apply bg-[#0D1117];
+        @apply text-base;
+
+        color: #41C8F4;
+    }
+
+    .post-content pre.astro-code {
+        @apply flex justify-start;
+        @apply py-3 pr-6;
+        @apply mt-2;
+        @apply mb-2;
+        @apply bg-[#0D1117] !important;
+        @apply overflow-x-auto;
+        @apply text-base;
+    }
+
+    h3 {
+        @apply text-2xl;
+        @apply mt-3;
+        @apply mb-3;
+        @apply font-semibold;
+    }
+
+    h4 {
+        @apply text-xl;
+        @apply mt-2;
+        @apply mb-2;
+        @apply font-semibold;
+    }
+
+    h6 {
+        @apply text-lg;
+        @apply mt-2;
+        @apply mb-2;
+        @apply font-semibold;
+    }
+}

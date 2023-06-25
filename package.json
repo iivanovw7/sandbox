@@ -1,0 +1,81 @@
+{
+    "name": "sandbox",
+    "version": "0.0.1",
+    "author": "iivanovw7",
+    "private": true,
+    "scripts": {
+        "bootstrap": "pnpm install && pnpm postinstall",
+        "build": "turbo build",
+        "clean": "turbo clean",
+        "dev": "turbo dev --no-cache --continue",
+        "lint": "turbo lint",
+        "lint:fix": "turbo lint -- --fix",
+        "pre-commit": "pnpm lint && pnpm test",
+        "prepare": "husky install",
+        "test": "turbo test",
+        "postinstall": "turbo stub --no-cache",
+        "reinstall": "pnpm clean && pnpm bootstrap",
+        "release": "semantic-release"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog",
+            "useEmoji": true
+        }
+    },
+    "packageManager": "pnpm@8.1.0",
+    "engines": {
+        "node": "=18.16.0",
+        "pnpm": "=8.6.2"
+    },
+    "devDependencies": {
+        "@semantic-release/changelog": "6.0.3",
+        "@semantic-release/commit-analyzer": "10.0.1",
+        "@semantic-release/git": "10.0.1",
+        "@semantic-release/release-notes-generator": "11.0.3",
+        "browserslist": "4.21.9",
+        "commitizen": "4.3.0",
+        "cz-git": "1.6.1",
+        "husky": "8.0.3",
+        "rimraf": "5.0.1",
+        "semantic-release": "21.0.5",
+        "turbo": "1.10.3"
+    },
+    "release": {
+        "mangle": false,
+        "headerIds": false,
+        "branches": [
+            "main",
+            {
+                "name": "dev",
+                "prerelease": true
+            }
+        ],
+        "repositoryUrl": "https://github.com/iivanovw7/sandbox.git",
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog",
+            [
+                "@semantic-release/changelog",
+                {
+                    "changelogFile": "./CHANGELOG.md",
+                    "changelogTitle": "# Semantic Versioning Changelog"
+                }
+            ],
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "./CHANGELOG.md"
+                    ],
+                    "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+                }
+            ]
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iivanovw7/sandbox.git"
+    }
+}
