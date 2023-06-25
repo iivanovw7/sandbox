@@ -23,11 +23,6 @@
             "useEmoji": true
         }
     },
-    "packageManager": "pnpm@8.6.3",
-    "engines": {
-        "node": "~18.16.0",
-        "pnpm": "~8.6.3"
-    },
     "devDependencies": {
         "@semantic-release/changelog": "6.0.3",
         "@semantic-release/commit-analyzer": "10.0.1",
