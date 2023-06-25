@@ -23,10 +23,10 @@
             "useEmoji": true
         }
     },
-    "packageManager": "pnpm@8.6.2",
+    "packageManager": "pnpm@8.6.3",
     "engines": {
-        "node": "=18.16.0",
-        "pnpm": "=8.6.2"
+        "node": "18.16.0",
+        "pnpm": "8.6.3"
     },
     "devDependencies": {
         "@semantic-release/changelog": "6.0.3",
