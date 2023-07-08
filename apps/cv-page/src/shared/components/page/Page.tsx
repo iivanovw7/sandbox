@@ -1,6 +1,5 @@
 import { clsx } from 'clsx';
-import type { PropsWithChildren } from 'react';
-import React from 'react';
+import React, { type PropsWithChildren } from 'react';
 
 import './Page.css';
 

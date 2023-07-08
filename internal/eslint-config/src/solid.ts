@@ -1,12 +1,11 @@
 /**
  * Project eslint config for `solid-js`.
- * @module packages/eslint-config/solid
+ * @module internal/eslint-config/solid
  */
 
 export default {
     'extends': [
         '@sandbox/eslint-config',
-        'iivanovw7/typescript',
         'iivanovw7/typedoc',
         'iivanovw7/feature-sliced',
         'iivanovw7/solid',

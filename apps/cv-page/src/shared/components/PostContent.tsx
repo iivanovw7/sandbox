@@ -1,5 +1,4 @@
-import type { PropsWithChildren } from 'react';
-import React from 'react';
+import React, { type PropsWithChildren } from 'react';
 
 import type { BlogCollectionEntry } from '@/shared/types';
 

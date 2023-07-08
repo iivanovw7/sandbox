@@ -1,6 +1,6 @@
 /**
  * Project eslint config for `astro`.
- * @module packages/eslint-config/astro
+ * @module internal/eslint-config/astro
  */
 
 export default {
@@ -11,14 +11,7 @@ export default {
     overrides: [
         {
             'extends': [
-                'iivanovw7/typescript'
-            ],
-            'files': ['**/*.ts'],
-        },
-        {
-            'extends': [
                 'iivanovw7/react',
-                'iivanovw7/typescript',
                 'iivanovw7/typedoc',
                 'iivanovw7/tailwind',
             ],
@@ -29,7 +22,6 @@ export default {
         {
             'extends': [
                 'iivanovw7/react',
-                'iivanovw7/typescript',
                 'iivanovw7/astro',
                 'iivanovw7/tailwind',
             ],

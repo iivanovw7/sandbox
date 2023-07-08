@@ -1,7 +1,6 @@
 import React from 'react';
 
-import type { Nullable } from '@/shared';
-import { GradientText, getValues, uuid } from '@/shared';
+import { GradientText, type Nullable, getValues, uuid } from '@/shared';
 
 import { EnergyLabel } from './EnergyLabel';
 import { Measuring } from './Measuring';

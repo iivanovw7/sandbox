@@ -1,12 +1,11 @@
 /**
  * Project eslint config for `test`.
- * @module packages/eslint-config/test
+ * @module internal/eslint-config/test
  */
 
 export default {
     'extends': [
         '@sandbox/eslint-config',
-        'iivanovw7/typescript',
         'iivanovw7/typedoc',
         'iivanovw7/test-vitest',
     ],

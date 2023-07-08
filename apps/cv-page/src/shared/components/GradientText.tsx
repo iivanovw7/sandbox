@@ -1,13 +1,12 @@
 import { clsx } from 'clsx';
-import type { ReactElement, ReactNode } from 'react';
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
 type GradientTextProps = {
     children: ReactNode;
     className?: string;
 };
 
-export const GradientText = (props: GradientTextProps): ReactElement => {
+export const GradientText = (props: GradientTextProps) => {
     const { children, className } = props;
 
     return (

@@ -1,6 +1,5 @@
 import { clsx } from 'clsx';
-import type { ReactNode } from 'react';
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
 type SectionProps = {
     children: ReactNode;
