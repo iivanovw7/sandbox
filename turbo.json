@@ -12,6 +12,8 @@
         "lint": {},
         "stub": {},
         "test": {},
+        "doc": {},
+        "preview": {},
         "clean": {
             "cache": false
         },

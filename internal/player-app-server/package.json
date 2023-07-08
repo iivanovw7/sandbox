@@ -1,0 +1,30 @@
+{
+    "name": "@sandbox/player-app-server",
+    "version": "1.0.0",
+    "license": "MIT",
+    "module": "commonjs",
+    "exports": {
+        ".": {
+            "default": "./src/index.ts"
+        }
+    },
+    "main": "./src/index.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "clean": "pnpm rimraf .turbo node_modules dist",
+        "lint": "pnpm eslint .",
+        "stub": "pnpm unbuild --stub"
+    },
+    "dependencies": {
+        "@sandbox/ts-config": "workspace:*",
+        "@sandbox/types": "workspace:*",
+        "@sandbox/eslint-config": "workspace:*",
+        "@types/node": "18.16.19",
+        "axios": "1.4.0",
+        "jose": "4.14.4",
+        "miragejs": "0.1.47",
+        "unbuild": "1.2.1"
+    }
+}

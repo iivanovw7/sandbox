@@ -1,7 +1,6 @@
 import React from 'react';
 
-import type { Nullable } from '@/shared';
-import { GradientText } from '@/shared';
+import { GradientText, type Nullable } from '@/shared';
 
 type FileNameProps = {
     file?: Nullable<File>;

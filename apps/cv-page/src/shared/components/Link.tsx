@@ -1,5 +1,4 @@
 import { clsx } from 'clsx';
-import type { ReactElement } from 'react';
 import React from 'react';
 
 import { GradientText } from './GradientText';
@@ -11,7 +10,7 @@ type LinkProps = {
     text: string;
 };
 
-export const Link = (props: LinkProps): ReactElement => {
+export const Link = (props: LinkProps) => {
     const { className, download, href, text } = props;
 
     return (

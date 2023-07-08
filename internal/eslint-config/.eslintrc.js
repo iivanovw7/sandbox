@@ -1,13 +1,14 @@
 /**
  * Eslint configuration.
- * @module packages/eslint-config/.eslintrc.js
- * @see module:packages/eslint-config
+ * @module internal/eslint-config/.eslintrc.js
+ * @see module:internal/eslint-config
  */
 
 module.exports = {
     'extends': ['@sandbox/eslint-config'],
     ignorePatterns: [
         '.eslintrc.js',
+        '/build/**',
         '/dist/**',
         '/node_modules/**',
         '.turbo',

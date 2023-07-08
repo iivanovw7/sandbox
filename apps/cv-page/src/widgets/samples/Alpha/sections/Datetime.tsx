@@ -1,8 +1,7 @@
 import { parse } from 'date-fns';
 import React from 'react';
 
-import type { Nullable } from '@/shared';
-import { getDateString, getValues } from '@/shared';
+import { type Nullable, getDateString, getValues } from '@/shared';
 
 type DatetimeProps = {
     report?: Nullable<Record<string, string>>;

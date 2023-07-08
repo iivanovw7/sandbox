@@ -5,7 +5,14 @@ module.exports = {
         project: './tsconfig.json',
         tsconfigRootDir: __dirname,
     },
-    ignorePatterns: ['.eslintrc.js', 'tailwind.config.js'],
+    ignorePatterns: [
+        '.eslintrc.js',
+        'tailwind.config.js',
+        '/build/**',
+        '/dist/**',
+        '/node_modules/**',
+        '.turbo',
+    ],
     root: true,
     rules: {
         'react/jsx-sort-props': 'off',

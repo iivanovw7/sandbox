@@ -1,5 +1,4 @@
-import type { ReactElement, ReactNode } from 'react';
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
 import { PostContent, PostHeader, Section } from '@/shared/components';
 import { APP_CONFIG } from '@/shared/config';
@@ -10,7 +9,7 @@ type BlogPostProps = {
     content: BlogCollectionEntry['data'];
 };
 
-export const BlogPost = (props: BlogPostProps): ReactElement => {
+export const BlogPost = (props: BlogPostProps) => {
     const { children, content } = props;
 
     return (
