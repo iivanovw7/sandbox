@@ -4,7 +4,7 @@
     "author": "iivanovw7",
     "private": true,
     "files": [
-        "tsconfig.application.json",
+        "tsconfig.solid.json",
         "tsconfig.astro.json",
         "tsconfig.common.json",
         "tsconfig.node.json"

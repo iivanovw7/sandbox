@@ -1,0 +1,10 @@
+{
+    "defaultCategory": "Other",
+    "entryPoints": [
+        "./src"
+    ],
+    "entryPointStrategy": "expand",
+    "out": "build/doc",
+    "name": "Player app",
+    "tsconfig": "./tsconfig.json"
+}

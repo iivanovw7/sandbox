@@ -1,0 +1,22 @@
+{
+  "common.validation.between.length": "Must contain between { min } and { max, plural, one {# symbol} other {# symbols}}",
+  "common.validation.email": "Please enter a valid email.",
+  "common.validation.empty": "Field is required",
+  "common.validation.max.length": "Maximum { length, plural, one {# symbol} other {# symbols} }",
+  "common.validation.min.length": "Minimum { length, plural, one {# symbol} other {# symbols} }",
+  "common.validation.string": "Field has to be a string",
+  "entities.profile.lock.error.title": "Whoops, wrong PIN. Please try again.",
+  "entities.profile.lock.status": "Profile Lock is currently on.",
+  "entities.profile.lock.title": "Enter your PIN to access this profile.",
+  "features.login.footer.call": "Questions? Call 800 855 855",
+  "features.login.footer.show.more": "Learn more.",
+  "features.login.form.password.placeholder": "Password",
+  "features.login.form.password.sign.in": "Sign In",
+  "features.login.form.password.sign.up": "New to Netflix?",
+  "features.login.form.password.sign.up.button": "Sign up now.",
+  "features.login.form.terms.of.use": "This page is protected by Google reCAPTCHA to ensure you`re not a bot.",
+  "features.login.form.terms.of.use.more": "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).",
+  "features.login.form.username.placeholder": "Email",
+  "features.login.form.warning.password": "Incorrect password. Please try again or you can reset your password.",
+  "features.login.form.warning.username": "Sorry, we can't find an account with this email address. Please try again or create a new account."
+}

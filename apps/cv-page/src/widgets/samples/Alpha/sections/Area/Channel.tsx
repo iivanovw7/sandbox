@@ -1,10 +1,6 @@
 import React from 'react';
 
-
-import { GradientText } from '@/shared/components';
-import type { Nullable } from '@/shared/types';
-import { pluck, uuid } from '@/shared/utils';
-import { getValues } from '@/shared/utils/object';
+import { GradientText, type Nullable, getValues, pluck, uuid } from '@/shared';
 
 import { EnergyLabel } from './EnergyLabel';
 import type { ChannelVariables, Measurement, MeasuringChannel } from './model/types';

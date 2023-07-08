@@ -1,7 +1,6 @@
 import React from 'react';
 
-import type { Nullable } from '@/shared';
-import { getValues } from '@/shared';
+import { type Nullable, getValues } from '@/shared';
 
 type SenderProps = {
     report?: Nullable<Record<string, string>>;

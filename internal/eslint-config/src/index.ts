@@ -1,6 +1,6 @@
 /**
  * Base project eslint config.
- * @module packages/eslint-config
+ * @module internal/eslint-config
  */
 export default {
     env: {
@@ -11,6 +11,7 @@ export default {
     'extends': [
         'turbo',
         'iivanovw7',
+        'iivanovw7/typescript',
         'iivanovw7/order',
     ],
     globals: { defineOptions: 'readonly' },
@@ -21,5 +22,6 @@ export default {
         'import/no-unresolved': 'off',
         'node/no-missing-import': 'off',
         'node/no-unpublished-import': 'off',
+        'react/jsx-filename-extension': 'off'
     },
 };

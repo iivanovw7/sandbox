@@ -1,12 +1,12 @@
 import { clsx } from 'clsx';
-import type { ReactNode } from 'react';
-import React, { useCallback, useMemo } from 'react';
+import React, { type ReactNode, useCallback, useMemo } from 'react';
 import type { Accept, DropzoneOptions, DropzoneState, FileError } from 'react-dropzone';
 import * as ReactDropzone from 'react-dropzone';
 
 import type { ErrorMessage, Maybe, Pixels } from '@/shared/types';
 
 type DropError = FileError['code'];
+// eslint-disable-next-line no-unused-vars
 type UseDropzone = (options?: DropzoneOptions) => DropzoneState;
 
 export type AcceptType = 'XML';
@@ -32,7 +32,9 @@ export type DropzoneProps = {
     isLoading?: boolean;
     label?: string;
     onDelete?: () => void;
+    // eslint-disable-next-line no-unused-vars
     onDrop: (file: File) => void;
+    // eslint-disable-next-line no-unused-vars
     onError: (error: ErrorMessage) => void;
 };
 
@@ -43,7 +45,7 @@ const { useDropzone } = 'useDropzone' in ReactDropzone
 // @ts-ignore eslint-disable-next-line import/namespace
     : ReactDropzone.default;
 
-export const Dropzone: React.FC<DropzoneProps> = (props) => {
+export const Dropzone = (props: DropzoneProps) => {
     const {
         acceptTypes,
         className,
