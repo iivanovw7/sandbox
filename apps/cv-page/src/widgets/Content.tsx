@@ -172,10 +172,10 @@ export const Content = () => (
             <div className="flex flex-col gap-6 text-lg">
                 <ul className="list-disc pl-6">
                     <li className="mt-3 text-gray-300">
-                        Pet project Typescript SPA in development.
+                        Repository with this webpage source code and another small ongoing pet project.
                         <a
                             className="ml-2 no-underline hover:text-cyan-400 hover:underline"
-                            href="https://github.com/iivanovw7/player-app"
+                            href="https://github.com/iivanovw7/sandbox"
                         >
                             <GradientText>Github link</GradientText>
                         </a>
