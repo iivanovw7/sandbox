@@ -5,5 +5,5 @@
 
 export { StorageKey, setStorage, storage } from './storage';
 export { getLocalProfile, setLocalProfile } from './profile';
-export { getAccessToken, setAccessToken } from './auth';
+export { getAccessToken, getRefreshToken, setAccessToken, setRefreshToken } from './auth';
 export { getLocale, setLocale } from './locale';

@@ -13,7 +13,6 @@ import { Datetime } from './sections/Datetime';
 import { FileName } from './sections/FileName';
 import { Sender } from './sections/Sender';
 
-
 const parser = new XMLParser(PARSER_OPTIONS);
 
 export const Alpha = () => {

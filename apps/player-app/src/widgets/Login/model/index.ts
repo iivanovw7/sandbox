@@ -5,11 +5,19 @@
 
 import type { TBasicApiError } from '@sandbox/player-app-server';
 
-import type { ErrorData, Validate } from '@/shared';
-import { ErrorCodeMap, authStore, getErrorCode, getLogger, makeApiRequest, noop, withLocalStore } from '@/shared';
+import {
+    ErrorCodeMap,
+    type ErrorData,
+    type Validate,
+    authStore,
+    getErrorCode,
+    getLogger,
+    makeApiRequest,
+    noop,
+    withLocalStore
+} from '@/shared';
 
 import { validateFormData, validateFormField } from '../lib/validation';
-
 
 type LoginFormValidation = {
     password: Validate<'password'>;
@@ -66,7 +74,7 @@ const INITIAL_VALIDATION: LoginFormValidation = {
  *  Login store constructor.
  *  @returns {Store} returns store instance.
  */
-export const createLoginStore = (): CreateLoginStore => {
+const createLoginStore = (): CreateLoginStore => {
     const [state, setState] = createStore<LoginState>({
         errors: INITIAL_FORM_ERRORS,
         form: EMPTY_FORM,

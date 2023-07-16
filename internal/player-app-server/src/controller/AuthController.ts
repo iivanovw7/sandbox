@@ -1,4 +1,4 @@
-import AuthService from '../service/AuthService';
+import { AuthService } from '../service';
 
 class AuthController {
     private service: AuthService = new AuthService();

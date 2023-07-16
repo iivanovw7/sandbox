@@ -16,11 +16,11 @@ const MESSAGES = {
  * `404` page.
  * @method
  * @constructor
- * @returns Ccomponent with children.
+ * @returns Component with children.
  */
 export const NotFound = () => (
     <Page>
-        <Header/>
+        <Header />
         <Page.Content type={Page.ContentType.NOT_FOUND}>
             <ErrorScreen
                 error={NOT_FOUND}

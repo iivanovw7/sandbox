@@ -1,3 +1,6 @@
+import type { Nullable } from '@/shared';
+import { getValues, pluck, toArray } from '@/shared';
+
 import { channelMap, unitsMap } from './constants';
 import type {
     ChannelTotal,
@@ -9,8 +12,6 @@ import type {
     SortPoint
 } from './types';
 
-import type { Nullable } from '@/shared';
-import { getValues, pluck, toArray } from '@/shared';
 
 export const sortChannelsByCode = (pointA: SortPoint, pointB: SortPoint): number => {
     const descA = pointA['@_code'];

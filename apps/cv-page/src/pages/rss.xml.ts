@@ -3,8 +3,7 @@ import { getCollection } from 'astro:content';
 import MarkdownIt from 'markdown-it';
 import sanitizeHtml from 'sanitize-html';
 
-import { APP_CONFIG } from '@/shared/config';
-import type { AnyObject } from '@/shared/types';
+import { APP_CONFIG, type AnyObject } from '@/shared';
 
 const parser = new MarkdownIt();
 

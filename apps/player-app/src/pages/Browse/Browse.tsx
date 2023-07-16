@@ -2,6 +2,7 @@
  * Module contains `Browse` page.
  * @module src/pages/Browse/Browse
  */
+import { Billboard } from '@/features';
 import { Header } from '@/widgets';
 
 import { withProfile } from '../withProfile';
@@ -12,10 +13,9 @@ import { withProfile } from '../withProfile';
  * @constructor
  * @returns Component with children.
  */
-export const Browse = withProfile(() => {
-    return (
-        <div>
-            <Header withMenu withNavigation />
-        </div>
-    );
-});
+export const Browse = withProfile(() => (
+    <div>
+        <Header withMenu withNavigation />
+        <Billboard />
+    </div>
+));

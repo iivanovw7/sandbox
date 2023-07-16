@@ -1,18 +1,20 @@
-import type { TBasicApiList, TProfile } from '../types';
-import profiles from '../stub/profiles.json';
-import { Result } from '../utils';
-import { Response as MirageResponse } from 'miragejs';
 import { HttpStatus } from '@sandbox/types';
+import { Response as MirageResponse } from 'miragejs';
 
-export default class ProfilesService {
+import profiles from '../stub/profiles.json';
+import type { TBasicApiList, TProfile } from '../types';
+import { Result } from '../utils';
+
+
+export class ProfilesService {
     public getProfiles() {
         return new MirageResponse(
-            HttpStatus.OK,
-            {},
-            Result.success<TBasicApiList<TProfile>>({
-                count: profiles.length,
-                data: profiles,
-            })
+                HttpStatus.OK,
+                {},
+                Result.success<TBasicApiList<TProfile>>({
+                    count: profiles.length,
+                    data: profiles,
+                })
         );
     }
 }

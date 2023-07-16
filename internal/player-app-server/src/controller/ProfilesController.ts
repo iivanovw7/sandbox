@@ -1,5 +1,5 @@
-import { ProfilesService } from '../service';
 import { authorize } from '../middlewares';
+import { ProfilesService } from '../service';
 
 class ProfilesController {
     private service: ProfilesService = new ProfilesService();

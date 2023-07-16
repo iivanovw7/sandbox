@@ -26,14 +26,12 @@ const {
  * @constructor
  * @returns Component with children.
  */
-export const Routing = () => {
-    return (
-        <Routes>
-            <Route protected component={Browse} path={browse} />
-            <Route component={NotFound} path={notFound} />
-            <Route component={Login} path={login} />
-            <Route element={<Navigate href={browse} />} path={home} />
-            <Route element={<Navigate href={notFound} />} path="/*" />
-        </Routes>
-    );
-};
+export const Routing = () => (
+    <Routes>
+        <Route protected component={Browse} path={browse} />
+        <Route component={NotFound} path={notFound} />
+        <Route component={Login} path={login} />
+        <Route element={<Navigate href={browse} />} path={home} />
+        <Route element={<Navigate href={notFound} />} path="/*" />
+    </Routes>
+);

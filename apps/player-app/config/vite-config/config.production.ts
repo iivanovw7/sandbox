@@ -8,7 +8,10 @@ import { pathResolve } from './utils';
 
 const vendorList = [
     'solid-js',
-    '@solidjs/router'
+    'solidjs-use',
+    '@solidjs/router',
+    '@solid-primitives/storage',
+    '@solid-primitives/utils',
 ];
 
 /**
