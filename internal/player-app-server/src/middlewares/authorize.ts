@@ -1,8 +1,8 @@
-import { ACCESS_TOKEN_SECRET, Result } from '../utils';
+import { type AnyFunction, HttpStatus } from '@sandbox/types';
 import { jwtVerify } from 'jose';
 import { Response as MirageResponse } from 'miragejs';
-import { type AnyFunction, HttpStatus } from '@sandbox/types';
 
+import { ACCESS_TOKEN_SECRET, Result } from '../utils';
 
 export const authorize = (handler?: AnyFunction) => {
     return async (schema, request, ...restArgs) => {
@@ -16,9 +16,9 @@ export const authorize = (handler?: AnyFunction) => {
         }
         catch (errorData) {
             return new MirageResponse(
-                HttpStatus.UNAUTHORIZED,
-                {},
-                Result.authorizationError()
+                    HttpStatus.UNAUTHORIZED,
+                    {},
+                    Result.authorizationError()
             );
         }
     };

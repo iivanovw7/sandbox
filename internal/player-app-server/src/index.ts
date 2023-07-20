@@ -1,5 +1,6 @@
-import { AuthController, ProfilesController } from './controller';
 import { RestSerializer, createServer } from 'miragejs';
+
+import { AuthController, ProfilesController } from './controller';
 
 export * from './types';
 

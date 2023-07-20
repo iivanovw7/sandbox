@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .post-content code {
+        @apply rounded-md;
+        @apply mt-2;
+        @apply mb-2;
+        @apply text-base;
+
+        color: #41C8F4;
+    }
+
+    .post-content pre.astro-code {
+        @apply flex justify-start;
+        @apply py-3 pr-6;
+        @apply mt-2;
+        @apply mb-2;
+        @apply bg-[#0D1117] !important;
+        @apply overflow-x-auto;
+        @apply text-base;
+    }
+
+    .post-content ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px 16px;
+    }
+
+    .post-content li {
+        list-style: disc;
+    }
+}

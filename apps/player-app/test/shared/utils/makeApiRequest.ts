@@ -1,8 +1,9 @@
 /**
  * Module contains makeApiRequest tests
  */
-import { makeApiRequest, noop, wait } from '../../../src/shared/utils';
 import type { AnyObject } from '@sandbox/types';
+
+import { makeApiRequest, noop, wait } from '../../../src/shared/utils';
 
 const onErrorMock = vi.fn();
 const onLoadingMock = vi.fn();

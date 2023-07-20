@@ -2,28 +2,25 @@
 import { getCollection } from 'astro:content';
 import React from 'react';
 
-import { BlogGallery, PaginationHeader, Section } from '@/shared/components';
-import { APP_CONFIG } from '@/shared/config';
-import { sortByDate } from '@/shared/utils';
-import Base from '@/templates/Base.astro';
+import { BlogGallery } from '@/features';
+import { APP_CONFIG, PaginationHeader, Section, sortByDate } from '@/shared';
+import BaseTemplate from '@/templates/Base.astro';
 
 const allPosts = sortByDate(await getCollection('blog'));
 
 export const getStaticPaths = () => allPosts;
 
 const title = `Blog page - ${APP_CONFIG.siteName}`;
-const description = 'Pagination example built with Astro styled with Tailwind CSS.';
-
+const description = 'Some personal notes.';
 ---
-
-    <Base head={{ description, title }}>
+    <BaseTemplate head={{ description, title }}>
         <Section>
             <PaginationHeader
-                description="Some personal notes."
+                description={description}
                 title="Posts"
             />
         </Section>
         <Section>
             <BlogGallery postList={allPosts} />
         </Section>
-    </Base>
+    </BaseTemplate>

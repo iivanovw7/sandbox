@@ -1,7 +1,8 @@
+import { HttpStatus } from '@sandbox/types';
 import { SignJWT, jwtVerify } from 'jose';
 import { type Request as MirageRequest, Response as MirageResponse } from 'miragejs';
+
 import { ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET, Result } from '../utils';
-import { HttpStatus } from '@sandbox/types';
 
 const USER = {
     password: 'user',
