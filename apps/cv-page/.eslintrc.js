@@ -6,16 +6,17 @@ module.exports = {
         tsconfigRootDir: __dirname,
     },
     ignorePatterns: [
-        '.eslintrc.js',
         'tailwind.config.js',
+        '.eslintrc.js',
+        '.turbo',
         '/build/**',
         '/dist/**',
         '/node_modules/**',
-        '.turbo',
     ],
     root: true,
     rules: {
         'react/jsx-sort-props': 'off',
+        'react/no-array-index-key': 'off',
     },
     settings: {
         'import/resolver': {

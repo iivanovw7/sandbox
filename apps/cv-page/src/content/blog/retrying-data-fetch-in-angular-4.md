@@ -37,7 +37,8 @@ export class ExampleComponent implements AfterContentInit, OnDestroy {
     private stopTrying = new Subject<any>(); // Stops retrying to verify auth code
     private subscription: Subscription = new Subscription();
 
-    constructor() {}
+    constructor() {
+    }
 
     // Starts trying to verify code
     ngAfterContentInit() {
@@ -58,8 +59,8 @@ export class ExampleComponent implements AfterContentInit, OnDestroy {
         const firstAttemptDelay = () => Observable.timer(this.authCodeSleep);
 
         const authCodeVerification = Observable.merge(
-            firstAttempt.delayWhen(firstAttemptDelay).takeUntil(this.stopTrying),
-            retryAttempt.delayWhen(firstAttemptDelay).takeUntil(this.stopTrying)
+                firstAttempt.delayWhen(firstAttemptDelay).takeUntil(this.stopTrying),
+                retryAttempt.delayWhen(firstAttemptDelay).takeUntil(this.stopTrying)
         );
 
         this.subscription.add(authCodeVerification.subscribe(async val => {

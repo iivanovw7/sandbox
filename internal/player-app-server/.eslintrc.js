@@ -8,10 +8,10 @@ module.exports = {
     'extends': ['@sandbox/eslint-config'],
     ignorePatterns: [
         '.eslintrc.js',
+        '.turbo',
         '/build/**',
         '/dist/**',
         '/node_modules/**',
-        '.turbo',
     ],
     'parserOptions': {
         'project': ['tsconfig.json'],

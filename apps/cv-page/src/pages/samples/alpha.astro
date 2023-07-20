@@ -1,9 +1,9 @@
 ---
 import React from 'react';
 
-import Base from '@/templates/Base.astro';
-import { Alpha } from '@/widgets';
+import { Alpha } from '@/features';
+import BaseTemplate from '@/templates/Base.astro';
 ---
-    <Base head={{ description: 'Alpha energy reports viewer', title: 'Energy reports' }}>
+    <BaseTemplate head={{ description: 'Alpha energy reports viewer', title: 'Energy reports' }}>
         <Alpha client:load />
-    </Base>
+    </BaseTemplate>
