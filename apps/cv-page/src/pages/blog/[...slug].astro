@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import React from 'react';
 
-import '../../shared/styles/post.css';
+import '@/shared/ui/styles/post.css';
 
 export const getStaticPaths = async () => {
     const blogEntries = await getCollection('blog');
@@ -15,5 +15,4 @@ export const getStaticPaths = async () => {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-
     <Content />

@@ -1,15 +1,144 @@
 ---
+import { getCollection } from 'astro:content';
 import React from 'react';
 
-import { APP_CONFIG } from '@/shared/config';
-import Base from '@/templates/Base.astro';
-import { Content, Hero } from '@/widgets';
+import { Hero } from '@/features';
+import { APP_CONFIG, Link, Page, Section, sortByDate } from '@/shared';
+import BaseTemplate from '@/templates/Base.astro';
+import BaseJobTemplate from '@/templates/BaseJob.astro';
+
+const jobs = sortByDate(await getCollection('jobs'));
 
 const { title } = APP_CONFIG;
 const { description } = APP_CONFIG;
 ---
-
-    <Base head={{ description, title }}>
+    <BaseTemplate head={{ description, title }}>
         <Hero />
-        <Content />
-    </Base>
+        <Page>
+            <Section title="OBJECTIVE">
+                <div class="flex flex-col gap-6 text-lg">
+                    <p>
+                        I have over 4 years of professional experience in web development, I am interested in using my
+                        expertise to build well-constructed, user-friendly web applications as a front-end developer.
+                        I`m interested in constant improvement of my technical skills.
+                    </p>
+                    <p>
+                        I have a track-record of optimizing web application performance with a keen eye for detail. My
+                        strong collaboration skills and my experience allows me to contribute seamlessly to any project.
+                    </p>
+                </div>
+            </Section>
+            <Section title="SKILLS">
+                <div class="flex flex-col gap-6 text-lg">
+                    <ul class="list-disc pl-6">
+                        <li>HTML, CSS, SASS, postcss</li>
+                        <li>Javascript / Typescript</li>
+                        <li>Single page applications, responsive web design</li>
+                        <li>Git (GitHub, GitLab)</li>
+                        <li>REST, GraphQL / Apollo</li>
+                        <li>E2E testing, CodeceptJS / Playwright</li>
+                        <li>ReactJS unit testing with Jest, React testing library, Chai/Mocha+Enzyme</li>
+                        <li>Jira / Wrike</li>
+                    </ul>
+                </div>
+            </Section>
+            <Section title="WORK EXPERIENCE">
+                <div class="flex flex-col gap-6 text-lg">
+                    {jobs.map((entry) => (
+                        <BaseJobTemplate key={entry.data.startDate} entry={entry} />
+                    ))}
+                </div>
+            </Section>
+            <Section title="CODE SAMPLES">
+                <div class="flex flex-col gap-6 text-lg">
+                    <ul class="list-disc pl-6">
+                        <li class="mt-3 text-gray-300">
+                            Pet project Typescript SPA in development.
+                            <Link className="ml-2"
+                                href="https://github.com/iivanovw7/sandbox"
+                                target="_blank"
+                                text="Github link" />
+                        </li>
+                        <li class="mt-3 text-gray-300">
+                            React Typescript (MobX) functional component example (also includes store).
+                            <Link className="ml-2"
+                                href="https://gist.github.com/iivanovw7/e7710de9b183437d4b0e0628ca88c5b6"
+                                target="_blank"
+                                text="Gist link" />
+                        </li>
+                        <li class="mt-3 text-gray-300">
+                            React (Redux Toolkit) class component examples.
+                            <Link className="ml-2"
+                                href="https://gist.github.com/iivanovw7/f46fc7539910e2d91debc281b88236bc"
+                                target="_blank"
+                                text="Gist link #1" />
+                            <Link className="ml-2"
+                                href="https://gist.github.com/iivanovw7/ba3703b783d7d05a2c670e4a50d1c210"
+                                target="_blank"
+                                text="Gist link #2" />
+                        </li>
+                        <li className="mt-3 text-gray-300">
+                            Example of usage google maps to create map with custom markers.
+                            <Link className="ml-2"
+                                href="https://github.com/iivanovw7/mobile-map-markers"
+                                target="_blank"
+                                text="Github link" />
+                        </li>
+                        <li class="mt-3 text-gray-300">
+                            Multiselect component could be used for filters. Works in codesandbox.
+                            <Link className="ml-2"
+                                href="https://codesandbox.io/s/multiselect-ceke1"
+                                target="_blank"
+                                text="Sandbox link" />
+                        </li>
+                    </ul>
+                </div>
+            </Section>
+            <Section title="ADDITIONAL SKILLS">
+                <div class="flex flex-col gap-6 text-lg">
+                    <ul class="list-disc pl-6">
+                        <li>
+                            As an experienced frontend developer, I have knowledge of
+                            a range of technologies such as GraphQL, BFF, Webpack
+                            3-5, Gulp, Docker, and Vite and I use WebStorm and have
+                            familiarity with graphic packages like Gimp and Krita.
+                        </li>
+                    </ul>
+                </div>
+            </Section>
+            <Section title="FOREIGN LANGUAGES">
+                <div class="flex flex-col gap-6 text-lg">
+                    <ul class="list-disc pl-6">
+                        <li>English - Advanced</li>
+                        <li>Russian - Native speaker</li>
+                    </ul>
+                </div>
+            </Section>
+            <Section title="EDUCATION">
+                <div class="flex flex-col gap-6 text-lg">
+                    <ul class="list-disc pl-6">
+                        <li>
+                            I hold an Engineering degree from the St. Petersburg
+                            University of Architecture and Civil Engineering
+                            (SPBGASU), Department of Expertise and Real Estate
+                            Management, with full-time studies.
+                        </li>
+                        <li>You Don&apos;t Know JS Yet (book series), 2022</li>
+                        <li>Learning JavaScript Design Patterns, 2021</li>
+                        <li>JavaScript: Understanding the Weird Parts, 2020</li>
+                        <li>Sass Workflow, 2019</li>
+                        <li>Just Javascript educational program, 2019</li>
+                    </ul>
+                </div>
+            </Section>
+            <Section title="HOBBIES">
+                <div class="flex flex-col gap-6 text-lg">
+                    <ul class="list-disc pl-6">
+                        <li>Bicycle</li>
+                        <li>Snowboard</li>
+                        <li>Travel</li>
+                    </ul>
+                </div>
+            </Section>
+        </Page>
+    </BaseTemplate>

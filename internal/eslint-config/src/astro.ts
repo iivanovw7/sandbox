@@ -26,8 +26,14 @@ export default {
                 'iivanovw7/tailwind',
             ],
             'files': [
-                '*.astro'
+                '**/*.astro'
             ],
+            rules: {
+                'react/no-unknown-property': [
+                    'error',
+                    { ignore: ['class'] }
+                ],
+            },
         },
     ],
     settings: {

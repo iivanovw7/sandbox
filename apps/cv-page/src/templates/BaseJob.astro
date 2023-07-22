@@ -1,0 +1,16 @@
+---
+import React from 'react';
+
+import { type JobCollectionEntry } from '@/shared';
+
+import { Job } from '../features';
+
+import '@/shared/ui/styles/job.css';
+
+const { entry } = Astro.props as { entry: JobCollectionEntry };
+const { Content } = await entry.render();
+---
+    <Job job={entry}>
+        <Content />
+    </Job>
+
