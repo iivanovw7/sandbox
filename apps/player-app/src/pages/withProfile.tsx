@@ -17,7 +17,7 @@ import { ErrorFallback } from './ErrorFallback';
  */
 export const withProfile = (Cmp: Component) => (props) => {
     const { error, execute: loadProfiles } = useAsyncState(
-        profilesStore.actions.loadProfiles,
+        profilesStore?.actions.loadProfiles,
         null,
         {
             immediate: false
@@ -35,7 +35,7 @@ export const withProfile = (Cmp: Component) => (props) => {
             <Match when={error()}>
                 <ErrorFallback />
             </Match>
-            <Match when={!! profilesStore.state.active}>
+            <Match when={!! profilesStore.state.active?.id}>
                 <Cmp {...props} />
             </Match>
         </Switch>

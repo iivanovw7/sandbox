@@ -5,3 +5,4 @@
 
 export * from './capitalize';
 export * from './isValidCode';
+export * from './uuid';

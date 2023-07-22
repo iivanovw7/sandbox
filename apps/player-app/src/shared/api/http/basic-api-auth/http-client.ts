@@ -18,7 +18,7 @@ export const http = createAxios({
     transform: {
         // TODO: Remove this interceptor when working with http-only cookies
         requestInterceptors: (config) => {
-            (config as Recordable).headers.Authorization = authStore.state?.refreshToken || '1';
+            (config as Recordable).headers.Authorization = authStore.state?.refreshToken || '';
 
             return config;
         },

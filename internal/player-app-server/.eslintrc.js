@@ -24,9 +24,9 @@ module.exports = {
             "files": ["src/**/*.ts", "*.config.ts"],
             rules: {
                 '@typescript-eslint/indent': 'off',
+                '@typescript-eslint/no-magic-numbers': 'off',
                 'react/jsx-filename-extension': 'off',
                 'import/no-default-export': 'off',
-                '@typescript-eslint/no-magic-numbers': 'off',
             },
         },
     ],

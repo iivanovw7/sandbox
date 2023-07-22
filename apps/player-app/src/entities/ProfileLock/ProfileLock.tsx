@@ -25,7 +25,7 @@ export type ProfileLockProps = {
  * @name src/entities/ProfileLock/ProfileLock
  * @method
  * @param {ProfileLockProps} props - component props.
- * @returns React component with children.
+ * @return Component with children.
  */
 export const ProfileLock = withProfileStore((props: ProfileLockProps) => {
     const { actions, state } = useProfileState();

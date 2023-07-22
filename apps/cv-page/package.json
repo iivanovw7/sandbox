@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "astro dev --host 0.0.0.0 --port 3040",
         "build": "astro build",
-        "preview": "astro preview",
+        "preview": "pnpm build && astro preview --host 0.0.0.0 --port 3040",
         "clean": "rimraf .turbo node_modules build",
         "lint": "tsc --noEmit && eslint 'src/**/*.{ts,tsx,astro}'"
     },

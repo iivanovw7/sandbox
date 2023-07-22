@@ -29,14 +29,14 @@ export const Menu = (props: MenuProps) => {
      * Logout current user profile.
      */
     const handleLogout: LinkButtonProps['onClick'] = () => {
-        authStore.actions.logout();
         profilesStore.actions.resetActiveProfile();
+        authStore.actions.logout();
     };
 
     /**
      * Profile editor imitation.
      */
-    const handleProfilesEdit = () => {
+    const handleProfileReset = () => {
         profilesStore.actions.resetActiveProfile();
     };
 
@@ -71,7 +71,10 @@ export const Menu = (props: MenuProps) => {
                         size: 30,
                         src: profile.avatar,
                     },
-                    onSelect: async () => props.onProfileClick(profile),
+                    onSelect: async () => {
+                        handleProfileReset();
+                        await props.onProfileClick(profile);
+                    },
                     text: profile.name,
                     textClass: styles.menuLinkText,
                     type: DropdownMenu.ItemType.button,
@@ -83,7 +86,7 @@ export const Menu = (props: MenuProps) => {
                         iconClass: styles.menuItemLinkIcon,
                         name: 'edit',
                     },
-                    onSelect: handleProfilesEdit,
+                    onSelect: handleProfileReset,
                     text: 'Manage Profiles',
                     type: DropdownMenu.ItemType.button,
                 },

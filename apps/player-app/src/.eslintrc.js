@@ -14,7 +14,7 @@ module.exports = {
         'import/no-absolute-path': 'off',
     },
     'parserOptions': {
-        'project': ['./../tsconfig.json'],
+        'project': ['../tsconfig.json'],
         tsconfigRootDir: __dirname,
         babelOptions: {
             configFile: '../babelrc.js',

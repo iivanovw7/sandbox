@@ -34,3 +34,13 @@ export type TLoginResult = {
     accessToken: string;
     refreshToken: string;
 };
+
+export type TBillboard = {
+    description: string;
+    endTime: number;
+    logo: string;
+    poster: string;
+    startTime: number;
+    title: string;
+    url: string;
+};

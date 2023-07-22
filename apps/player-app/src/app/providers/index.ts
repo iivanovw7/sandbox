@@ -18,9 +18,9 @@ import { withWaitScreen } from './withWaitScreen';
  * @returns all HOC`s combined.
  */
 export const withProviders = compose(
+    withRouter,
     withIntl,
     withTheme,
-    withRouter,
-    withErrorBoundary,
-    withWaitScreen
+    withWaitScreen,
+    withErrorBoundary
 );

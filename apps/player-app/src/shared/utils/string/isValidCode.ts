@@ -3,6 +3,7 @@
  * @module src/shared/utils/string/isValidCode
  */
 
+import type { Maybe } from '@sandbox/types';
 import { allPass, isNil, not, pipe } from 'ramda';
 
 import { isNumeric } from '../lang';

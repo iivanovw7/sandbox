@@ -15,16 +15,14 @@ import { type LocaleMessages, importMessages, settingsStore } from '@/shared';
  * @returns component with children.
  */
 export const withIntl = (Cmp: Component) => (props) => {
-    const { isReady, state: messages } = useAsyncState<LocaleMessages>(
+    const { state: messages } = useAsyncState<LocaleMessages>(
         importMessages(settingsStore.state.locale),
         {} as LocaleMessages
     );
 
     return (
-        <Show when={isReady()}>
-            <IntlProvider locale={settingsStore.state.locale} messages={messages()}>
-                <Cmp {...props} />
-            </IntlProvider>
-        </Show>
+        <IntlProvider locale={settingsStore.state.locale} messages={messages()}>
+            <Cmp {...props} />
+        </IntlProvider>
     );
 };

@@ -1,2 +1,3 @@
-export { default as ProfilesService } from './ProfilesService';
-export { default as AuthService } from './AuthService';
+export { ProfilesService } from './ProfilesService';
+export { AuthService } from './AuthService';
+export { BillboardService } from './BillboardService';

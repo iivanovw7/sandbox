@@ -6,15 +6,15 @@ import type { TBasicApiList, TProfile } from '../types';
 import { Result } from '../utils';
 
 
-export default class ProfilesService {
+export class ProfilesService {
     public getProfiles() {
         return new MirageResponse(
-            HttpStatus.OK,
-            {},
-            Result.success<TBasicApiList<TProfile>>({
-                count: profiles.length,
-                data: profiles,
-            })
+                HttpStatus.OK,
+                {},
+                Result.success<TBasicApiList<TProfile>>({
+                    count: profiles.length,
+                    data: profiles,
+                })
         );
     }
 }

@@ -4,6 +4,8 @@
     @typescript-eslint/explicit-module-boundary-types
 */
 
+import type { AnyObject } from '@sandbox/types';
+
 import { toArray } from '../../../src/shared/utils';
 
 /**

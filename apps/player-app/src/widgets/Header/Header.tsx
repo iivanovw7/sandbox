@@ -76,15 +76,17 @@ export const Header = (props: HeaderProps) => {
                     imageClass={styles.logoImage({ isEmpty: isEmpty() })}
                     src={Logo}
                 />
-                {hasNavigation() && <Navigation />}
+                <Show when={hasNavigation}>
+                    <Navigation />
+                </Show>
             </div>
-            {props.withMenu && (
+            <Show when={props.withMenu}>
                 <div class={styles.section}>
                     <Search />
                     <Notifications />
                     <Menu onProfileClick={handleClick} />
                 </div>
-            )}
+            </Show>
             <ProfileLock
                 profile={profile()}
                 setProfile={setProfile}
