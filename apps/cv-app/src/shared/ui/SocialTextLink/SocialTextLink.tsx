@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import { LuAtSign, LuGithub, LuLinkedin, LuSend, LuTwitter } from '@qwikest/icons/lucide';
 import { capitalize } from '@sandbox/utils';
+import { AtSignIcon, GithubIcon, LinkedinIcon, SendIcon, TwitterIcon } from 'lucide-qwik';
 
 import { DATA } from '@/shared';
 
@@ -13,11 +13,11 @@ export type SocialTextLinkProps = {
 };
 
 export const socialIconsMap: Record<TSocialLink, JSXNode> = {
-    email: <LuAtSign class="w-6 h-6 text-inherit" />,
-    github: <LuGithub class="w-6 h-6 text-inherit" />,
-    linkedin: <LuLinkedin class="w-6 h-6 text-inherit" />,
-    telegram: <LuSend class="w-6 h-6 text-inherit" />,
-    twitter: <LuTwitter class="w-6 h-6 text-inherit" />
+    email: <AtSignIcon class="w-6 h-6 text-inherit" />,
+    github: <GithubIcon class="w-6 h-6 text-inherit" />,
+    linkedin: <LinkedinIcon class="w-6 h-6 text-inherit" />,
+    telegram: <SendIcon class="w-6 h-6 text-inherit" />,
+    twitter: <TwitterIcon class="w-6 h-6 text-inherit" />
 };
 
 export const SocialTextLink = component$((props: SocialTextLinkProps) => (

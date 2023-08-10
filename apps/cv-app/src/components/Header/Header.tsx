@@ -1,7 +1,7 @@
 import { $, component$, useContext, useVisibleTask$ } from '@builder.io/qwik';
-import { LuContrast, LuExternalLink, LuTerminal } from '@qwikest/icons/lucide';
 import type { Nullable } from '@sandbox/types';
 import { capitalize } from '@sandbox/utils';
+import { ContrastIcon, ExternalLinkIcon, TerminalIcon } from 'lucide-qwik';
 
 import type { Theme } from '#/ui';
 import { layoutCtx } from '@/routes/layout';
@@ -27,7 +27,7 @@ export const Header = component$(() => {
     const layoutState = useContext(layoutCtx);
     const state = useStore<TState>(() => ({
         isScrollHandlingScheduled: false,
-        isScrollUp: false,
+        isScrollUp: true,
         scrollPosition: 0,
         theme: 'light'
     }));
@@ -104,7 +104,7 @@ export const Header = component$(() => {
                 'px-6 flex flex-col gap-2 mx-auto max-w-screen-lg w-full',
                 'md:justify-between md:items-center md:flex-row']}>
                 <div class="flex items-center gap-x-2">
-                    <LuTerminal class="w-5 h-5 sm:w-9 sm:h-9 text-gray-200" />
+                    <TerminalIcon class="w-5 h-5 sm:w-9 sm:h-9 text-gray-200" />
                     <div class="flex flex-row items-center">
                         <div class={[styles.title, 'flex items-center']}>
                             <h3 class="text-base sm:text-2xl text-gray-200">{title}</h3>
@@ -125,7 +125,6 @@ export const Header = component$(() => {
                                     type="button"
                                     onClick$={() => {
                                         layoutState.onClickNav?.(path);
-                                        state.isScrollUp = true;
                                     }}
                                 >
                                     {capitalize(path)}
@@ -135,7 +134,7 @@ export const Header = component$(() => {
                         <li class="text-gray-500 transition-colors hover:text-white">
                             <a class="flex flex-row gap-2" href={resume} target="_blank">
                                 <span>Resume</span>
-                                <LuExternalLink class="w-4 h-4" />
+                                <ExternalLinkIcon class="w-4 h-4" />
                             </a>
                         </li>
                     </ul>
@@ -143,7 +142,7 @@ export const Header = component$(() => {
                         <button class="flex flex-row items-center ml-4 hover:text-white"
                             type="button"
                             onclick$={handleThemeButtonClick}>
-                            <LuContrast class="w-4 sm:w-6 h-4 sm:h-6" />
+                            <ContrastIcon class="w-4 sm:w-6 h-4 sm:h-6" />
                         </button>
                     </div>
                 </nav>

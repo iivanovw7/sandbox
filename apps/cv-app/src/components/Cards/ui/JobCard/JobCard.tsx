@@ -1,8 +1,8 @@
 import { $, component$, useVisibleTask$ } from '@builder.io/qwik';
-import { LuArrowBigLeft, LuArrowBigRight } from '@qwikest/icons/lucide';
 import type { Nullable, Percent } from '@sandbox/types';
 import gsap from 'gsap';
 import Draggable from 'gsap/dist/Draggable';
+import { ArrowBigLeftIcon, ArrowBigRightIcon } from 'lucide-qwik';
 
 import { CardButton, CardFrame, DATA, sortByDate } from '@/shared';
 
@@ -40,8 +40,6 @@ const formatJobDate = (value?: Nullable<string>) => {
         ? dateFormatter.format(new Date(String(value)))
         : 'Present';
 };
-
-gsap.registerPlugin(Draggable);
 
 export const JobCard = component$((props: TJobsCardProps) => {
     const sliderRef = useSignal<HTMLDivElement>();
@@ -99,6 +97,8 @@ export const JobCard = component$((props: TJobsCardProps) => {
     });
 
     useVisibleTask$(async () => {
+        gsap.registerPlugin(Draggable);
+
         const card = sliderRef.value;
         const slides = card?.querySelectorAll(`.${SLIDE_CLASS}`);
 
@@ -183,12 +183,12 @@ export const JobCard = component$((props: TJobsCardProps) => {
                             ]}>
                             <div class="flex flex-row items-center gap-2">
                                 <h2 class="text-xl md:text-2xl md:text-3xl">
-                                    <span class="text-gray-900 dark:text-gray-300">
-                                    Currently I`m working at
-                                    </span>
-                                    <span class="ml-2">
-                                        {job.company}
-                                    </span>
+                                    {! job.end && (
+                                        <span class="text-gray-900 dark:text-gray-300">
+                                            Currently I`m working at
+                                        </span>
+                                    )}
+                                    <span class="ml-2">{job.company}</span>
                                 </h2>
                                 <img
                                     alt="Avatar"
@@ -227,11 +227,11 @@ export const JobCard = component$((props: TJobsCardProps) => {
                             'flex-row justify-end items-end gap-2 p-0'
                         ]}>
                         <CardButton onClick$={() => animateSlides(1)}>
-                            <LuArrowBigLeft
+                            <ArrowBigLeftIcon
                                 class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                         </CardButton>
                         <CardButton onClick$={() => animateSlides(-1)}>
-                            <LuArrowBigRight
+                            <ArrowBigRightIcon
                                 class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                         </CardButton>
                     </div>

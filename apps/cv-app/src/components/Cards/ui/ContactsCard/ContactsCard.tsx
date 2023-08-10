@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import { LuAtSign, LuSend } from '@qwikest/icons/lucide';
+import { AtSignIcon, SendIcon } from 'lucide-qwik';
 
 import { CardFrame, CardLink, DATA } from '@/shared';
 
@@ -30,10 +30,10 @@ export const ContactsCard = component$((props: TContactsCardProps) => (
             </div>
             <div class="flex flex-row items-start gap-2 mt-4">
                 <CardLink href={social.email}>
-                    <LuAtSign class="w-7 h-7 text-gray-900 dark:text-gray-200" />
+                    <AtSignIcon class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                 </CardLink>
                 <CardLink href={social.telegram}>
-                    <LuSend class="w-7 h-7 text-gray-900 dark:text-gray-200" />
+                    <SendIcon class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                 </CardLink>
             </div>
         </div>

@@ -16,11 +16,6 @@
         "start": "vite --open --mode ssr",
         "qwik": "qwik"
     },
-    "dependencies": {
-        "@qwikest/icons": "0.0.8",
-        "pixi.js": "7.2.4",
-        "gsap": "3.12.2"
-    },
     "devDependencies": {
         "@builder.io/partytown": "^0.8.0",
         "@builder.io/qwik": "1.2.6",
@@ -34,12 +29,15 @@
         "@typescript-eslint/eslint-plugin": "5.62.0",
         "@typescript-eslint/parser": "5.62.0",
         "autoprefixer": "10.4.14",
+        "gsap": "3.12.2",
         "eslint": "8.39.0",
         "eslint-plugin-qwik": "0.107.0",
+        "lucide-qwik": "1.0.0",
         "postcss": "8.4.27",
         "postcss-100vh-fix": "1.0.2",
         "postcss-normalize": "10.0.1",
         "postcss-preset-env": "8.5.1",
+        "pixi.js": "7.2.4",
         "stylelint": "15.10.2",
         "stylelint-config-recommended": "13.0.0",
         "stylelint-config-tailwindcss": "0.0.7",

@@ -1,6 +1,6 @@
 import { component$, useContext } from '@builder.io/qwik';
-import { LuExternalLink, LuGithub } from '@qwikest/icons/lucide';
 import { capitalize } from '@sandbox/utils';
+import { ExternalLinkIcon, GithubIcon } from 'lucide-qwik';
 
 import { layoutCtx } from '@/routes/layout';
 import { DATA, SocialTextLink, type TSocialLink } from '@/shared';
@@ -58,7 +58,7 @@ export const Footer = component$(() => {
                                 href={resume}
                                 target="_blank">
                                 <span>Resume</span>
-                                <LuExternalLink class="w-4 h-4" />
+                                <ExternalLinkIcon class="w-4 h-4" />
                             </a>
                         </nav>
                     </div>
@@ -76,7 +76,7 @@ export const Footer = component$(() => {
                         ]}
                         href={project}
                         target="_blank">
-                        <LuGithub class="w-6 h-6" />
+                        <GithubIcon class="w-6 h-6" />
                     </a>
                 </div>
             </div>

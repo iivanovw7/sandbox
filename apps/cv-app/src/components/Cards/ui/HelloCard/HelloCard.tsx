@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import { LuBox, LuGithub, LuLinkedin, LuTwitter } from '@qwikest/icons/lucide';
+import { BoxIcon, GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-qwik';
 
 import { CardFrame, CardLink, DATA } from '@/shared';
 
@@ -21,10 +21,10 @@ export const HelloCard = component$((props: THelloCardProps) => (
         ]}>
         <div class="flex flex-col md:flex-row gap-4 justify-between">
             <div class="flex flex-row items-center gap-2">
-                <LuBox class="w-10 h-10 text-violet-800 hidden md:block" />
+                <BoxIcon class="w-10 h-10 text-violet-800 hidden md:block" />
                 <div class="flex flex-col">
                     <p class="font-bold text-xl md:text-2xl">
-                        {`Hi there, I'm ${fullName} 👋`}
+                        {`Hi there, I'm ${fullName}`}
                     </p>
                     <p class="text-lg text-gray-600 dark:text-gray-500">
                         {description}
@@ -33,13 +33,13 @@ export const HelloCard = component$((props: THelloCardProps) => (
             </div>
             <div class="flex row items-center gap-4">
                 <CardLink href={social.twitter}>
-                    <LuTwitter class="w-7 h-7 text-gray-900 dark:text-gray-200" />
+                    <TwitterIcon class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                 </CardLink>
                 <CardLink href={social.linkedin}>
-                    <LuLinkedin class="w-7 h-7 text-gray-900 dark:text-gray-200" />
+                    <LinkedinIcon class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                 </CardLink>
                 <CardLink href={social.github}>
-                    <LuGithub class="w-7 h-7 text-gray-900 dark:text-gray-200" />
+                    <GithubIcon class="w-7 h-7 text-gray-900 dark:text-gray-200" />
                 </CardLink>
             </div>
         </div>
