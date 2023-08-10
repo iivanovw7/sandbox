@@ -1,6 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Application",
+    "display": "Solid",
     "extends": "./tsconfig.common.json",
     "compilerOptions": {
         "jsx": "react-jsx",

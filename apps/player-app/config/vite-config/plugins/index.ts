@@ -14,9 +14,9 @@ import solidPlugin from 'vite-plugin-solid';
 import { pathResolve } from '../utils';
 
 import { configCompressPlugin } from './compress';
+import { configCopyPlugin } from './copy';
 import { configSvgIconsPlugin } from './svgIcons';
 import { configVisualizerConfig } from './visualizer';
-import { configStaticCopyPlugin } from './staticCopy';
 
 export type CreatePluginsParams = {
     command: string;
@@ -124,7 +124,7 @@ export const createPlugins = async (params: CreatePluginsParams) => {
 
     if (isBuild) {
         plugins.push(configCompressPlugin({ compress }));
-        plugins.push(configStaticCopyPlugin());
+        plugins.push(configCopyPlugin());
     }
 
     return plugins;

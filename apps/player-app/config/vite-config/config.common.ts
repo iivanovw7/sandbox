@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer';
 import postcss100VhFix from 'postcss-100vh-fix';
 import postcssNormalize from 'postcss-normalize';
 import postcssPresetEnv from 'postcss-preset-env';
-import { loadEnv } from 'vite';
+import { type UserConfigExport, loadEnv } from 'vite';
 
 import { createPlugins } from './plugins';
 import { pathResolve, root } from './utils';
@@ -16,21 +16,23 @@ import { pathResolve, root } from './utils';
  * @param {string} mode - current running mode.
  * @param {string} command - current command.
  */
-export const getCommonConfig = async (mode: string, command: string) => {
+export const getCommonConfig = async (mode: string, command: string): Promise<UserConfigExport> => {
     const { VITE_BUILD_COMPRESS, VITE_ENABLE_ANALYZE } = loadEnv(mode, root);
 
     return {
         css: {
-            plugins: [
-                postcss100VhFix,
-                postcssNormalize({
-                    forceImport: true
-                }),
-                autoprefixer,
-                postcssPresetEnv({
-                    browsers: 'last 2 versions'
-                }),
-            ],
+            postcss: {
+                plugins: [
+                    postcss100VhFix,
+                    postcssNormalize({
+                        forceImport: true
+                    }),
+                    autoprefixer,
+                    postcssPresetEnv({
+                        browsers: 'last 2 versions'
+                    }),
+                ],
+            },
         },
         plugins: await createPlugins({
             command,

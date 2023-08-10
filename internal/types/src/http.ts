@@ -8,9 +8,9 @@
 
 import type { Recordable } from './utils';
 
-export interface RequestOptions {
+export type RequestOptions = {
     apiUrl?: string;
-}
+};
 
 export type UploadFileParams = {
     [key: string]: any;

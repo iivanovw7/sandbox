@@ -10,8 +10,9 @@ Monorepo with multiple personal projects.
 
 This repository includes the following packages and apps:
 
-### Apps and Packages
+### Apps
 
+- `cv-app` [qwik](https://qwik.builder.io) contacts page.
 - `cv-page` astro [website](apps/cv-page/README.md).
 - `player-app` ott player web [app]().
 
@@ -21,13 +22,17 @@ This repository includes the following packages and apps:
 - [PNPM 8.x](https://pnpm.io/)
 - [nvm](https://github.com/nvm-sh/nvm) (*optional*)
 
-### Packages
+### Internal
 
 - `eslint-config`: [Eslint](https://eslint.org/) configs with plugins.
 - `ts-config`: [Typescript](https://www.typescriptlang.org/) ts configs.
 - `vite-config`: [Vite](https://vitejs.dev/) configs.
 - `types`: common types.
 - `player-app-server`: server application stub.
+
+### Packages
+
+- `utils`: common utils.
 
 ### Clone
 

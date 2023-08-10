@@ -22,7 +22,7 @@ export const StorageKey = {
     /** User profile id. */
     profile: 'profile',
     /** Basic API refreshToken token. */
-    refreshToken: 'accessToken',
+    refreshToken: 'refreshToken',
 } as const;
 
 export type StorageKey = typeof StorageKey[keyof typeof StorageKey];

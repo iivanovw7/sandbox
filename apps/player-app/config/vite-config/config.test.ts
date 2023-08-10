@@ -30,9 +30,14 @@ export const getTestConfig = (): UserConfig => ({
         ],
         globals: true,
         include: ['./test/**/*.{ts,tsx}'],
+        onConsoleLog: (log) => {
+            if (log.includes('computations created outside a `createRoot` or `render` will never be disposed')) {
+                return false;
+            }
+        },
         setupFiles: [`${pathResolve('test/_helper/setup.ts')}/`],
         transformMode: {
-            web: [/\.css.ts$/],
+            web: [/\.css.ts$/, /\.[jt]sx?$/],
         },
         watch: false
     },

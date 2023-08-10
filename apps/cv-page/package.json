@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "astro dev --host 0.0.0.0 --port 3040",
         "build": "astro build",
-        "preview": "astro preview",
+        "preview": "pnpm build && astro preview --host 0.0.0.0 --port 3040",
         "clean": "rimraf .turbo node_modules build",
         "lint": "tsc --noEmit && eslint 'src/**/*.{ts,tsx,astro}'"
     },
@@ -35,6 +35,9 @@
         "postcss-100vh-fix": "1.0.2",
         "postcss-import": "15.1.0",
         "rollup": "3.25.1",
+        "stylelint": "15.10.2",
+        "stylelint-config-recommended": "13.0.0",
+        "stylelint-config-tailwindcss": "0.0.7",
         "tailwindcss": "3.3.3",
         "typescript": "5.1.3"
     },

@@ -4,3 +4,4 @@
  */
 
 export * from './profiles';
+export * from './billboard';

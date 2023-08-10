@@ -20,12 +20,11 @@ const { description } = APP_CONFIG;
                     <p>
                         I have over 4 years of professional experience in web development, I am interested in using my
                         expertise to build well-constructed, user-friendly web applications as a front-end developer.
+                        I`m interested in constant improvement of my technical skills.
                     </p>
                     <p>
-                        I`m interested in constant improvement of my technical skills in HTML, CSS, SASS, Typescript,
-                        and React to deliver top-notch products. I have a track-record of optimizing web application
-                        performance with a keen eye for detail. My strong collaboration skills and my experience
-                        allows me to contribute seamlessly to any project.
+                        I have a track-record of optimizing web application performance with a keen eye for detail. My
+                        strong collaboration skills and my experience allows me to contribute seamlessly to any project.
                     </p>
                 </div>
             </Section>
@@ -45,8 +44,8 @@ const { description } = APP_CONFIG;
             </Section>
             <Section title="WORK EXPERIENCE">
                 <div class="flex flex-col gap-6 text-lg">
-                    {jobs.map((entry, index) => (
-                        <BaseJobTemplate key={index} entry={entry} />
+                    {jobs.map((entry) => (
+                        <BaseJobTemplate key={entry.data.startDate} entry={entry} />
                     ))}
                 </div>
             </Section>

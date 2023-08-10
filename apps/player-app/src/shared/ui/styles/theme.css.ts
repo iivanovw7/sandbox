@@ -156,8 +156,8 @@ export const dark = createTheme(theme, {
         textFieldLabel: palette['grey-500'],
     },
     secondary: {
-        button: transparentize(0.15, palette['grey-100']),
-        buttonAccent: transparentize(0.05, palette['grey-100']),
+        button: transparentize(0.1, palette['grey-100']),
+        buttonAccent: transparentize(0.2, palette['grey-100']),
         buttonAccentFillNone: transparentize(0.1, palette['grey-100']),
         buttonAccentOutlined: transparentize(0.15, palette['grey-100']),
         buttonDisabled: palette['grey-500'],
@@ -183,7 +183,7 @@ export const dark = createTheme(theme, {
         textBold: `2px 2px 4px ${transparentize(0.6, palette.black)}`,
     },
     tertiary: {
-        button: transparentize(0.15, palette['grey-550']),
+        button: transparentize(0.1, palette['grey-550']),
         buttonAccent: transparentize(0.2, palette['grey-550']),
         buttonAccentFillNone: transparentize(0.1, palette['grey-550']),
         buttonAccentOutlined: transparentize(0.13, palette['grey-300']),

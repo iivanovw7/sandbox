@@ -1,0 +1,9 @@
+{
+    "title": "Tears of steel",
+    "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.mpd",
+    "poster": "/assets/stub/billboard-poster.png",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "logo": "/assets/stub/billboard-logo.png",
+    "startTime": 50,
+    "endTime": 180
+}

@@ -1,6 +1,6 @@
 /**
  * Module contains application header search bar.
- * @module src/widgets/Search/Search
+ * @module src/features/Search/Search
  */
 import { Button, useBreakpoints } from '@/shared';
 
@@ -8,9 +8,9 @@ import { styles } from './Search.css';
 
 /**
  * Header Search component.
+ * @constructor
  * @method
  * @returns Component with children.
- * @constructor
  */
 export const Search = () => {
     const { xsUp } = useBreakpoints();

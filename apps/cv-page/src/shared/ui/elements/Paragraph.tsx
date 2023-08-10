@@ -20,11 +20,13 @@ export const Paragraph = (props: ParagraphProps) => {
             <div>
                 <div className="flex flex-row items-center gap-y-2 ">
                     <h4 className="mr-4 text-2xl font-semibold">{title}</h4>
-                    <img
-                        alt="Avatar"
-                        className="h-6 justify-center md:justify-start"
-                        loading="lazy"
-                        src={image} />
+                    {!! image && (
+                        <img
+                            alt="Avatar"
+                            className="h-10 justify-center rounded-md bg-slate-900 p-2 md:justify-start"
+                            loading="lazy"
+                            src={image} />
+                    )}
                 </div>
                 <p className="mt-1 text-gray-400">{description}</p>
                 <div>{content}</div>

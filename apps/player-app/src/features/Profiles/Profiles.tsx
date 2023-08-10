@@ -5,7 +5,7 @@
 import type { TProfile } from '@sandbox/player-app-server';
 import type { Nullable } from '@sandbox/types';
 
-import { ProfileLock } from '@/entities';
+import { ProfileLock } from '@/entities/ProfileLock';
 import { Button, type LinkButtonProps, isValidCode, profilesStore } from '@/shared';
 
 import { styles } from './Profiles.css';

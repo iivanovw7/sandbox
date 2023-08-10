@@ -6,6 +6,8 @@ export type Pixels = number;
 
 export type Milliseconds = number;
 
+export type Percent = number;
+
 /** Represents type of optional object. */
 export type Maybe<T> = T | null | undefined;
 
