@@ -1,0 +1,43 @@
+nav {
+    transition: top 500ms ease-in-out;
+}
+
+nav.scroll-up {
+    top: 0;
+}
+
+nav.scroll-down {
+    top: -100%;
+}
+
+.title {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: Print 2s steps(32, end) forwards;
+    margin: 0;
+}
+
+.cursor {
+    animation: Blink 1s infinite;
+    margin-left: 2px;
+    color: theme('colors.white');
+}
+
+@keyframes Print {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes Blink {
+    to {
+        opacity: 0;
+    }
+}

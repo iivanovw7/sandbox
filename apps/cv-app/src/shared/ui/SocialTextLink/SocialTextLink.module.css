@@ -1,0 +1,6 @@
+.link::after {
+    content: attr(aria-label);
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
