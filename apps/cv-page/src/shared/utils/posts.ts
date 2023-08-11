@@ -1,6 +1,6 @@
-import type { BlogCollectionEntry, JobCollectionEntry } from '@/shared/types';
+import type { BlogCollectionEntry } from '@/shared/types';
 
-type TEntry = BlogCollectionEntry | JobCollectionEntry;
+type TEntry = BlogCollectionEntry;
 
 export const sortByDate = <Entry extends TEntry>(posts: Entry[]): Entry[] => {
     return posts.sort((a, b) => {

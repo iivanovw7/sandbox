@@ -10,4 +10,5 @@ module.exports = {
         require('postcss-100vh-fix'),
         require('autoprefixer'),
     ],
+    darkMode: 'class',
 };

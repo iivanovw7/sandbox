@@ -20,9 +20,10 @@ const {
             <meta content={APP_CONFIG.author} name="author" />
             <link href="/rss.xml" rel="alternate" type="application/rss+xml" />
             <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+            <script src="/assets/js/theme.js" type="module" />
         </head>
         <body>
-            <Navbar />
+            <Navbar client:load />
             <Page>
                 <slot></slot>
             </Page>

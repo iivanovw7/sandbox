@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-    a:not(#header-logo) {
-        @apply font-medium;
-        @apply dark:text-cyan-600;
-        @apply hover:underline;
-    }
-
     .post-content code {
         @apply rounded-md;
         @apply mt-2;

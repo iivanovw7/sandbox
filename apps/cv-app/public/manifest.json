@@ -1,9 +1,0 @@
-{
-    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-    "name": "Igor Ivanov, Frontend developer",
-    "short_name": "Igor Ivanov",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#fff",
-    "description": "A Qwik project app."
-}
