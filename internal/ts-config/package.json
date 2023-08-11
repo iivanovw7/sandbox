@@ -7,8 +7,7 @@
         "tsconfig.solid.json",
         "tsconfig.astro.json",
         "tsconfig.common.json",
-        "tsconfig.node.json",
-        "tsconfig.qwik.json"
+        "tsconfig.node.json"
     ],
     "dependencies": {
         "@types/node": "18.16.18",

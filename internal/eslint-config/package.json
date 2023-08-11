@@ -23,11 +23,6 @@
             "types": "./dist/astro.d.ts",
             "import": "./dist/astro.mjs",
             "require": "./dist/astro.cjs"
-        },
-        "./qwik": {
-            "types": "./dist/qwik.d.ts",
-            "import": "./dist/qwik.mjs",
-            "require": "./dist/qwik.cjs"
         }
     },
     "main": "./dist/index.cjs",

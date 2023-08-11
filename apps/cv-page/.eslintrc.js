@@ -12,11 +12,13 @@ module.exports = {
         '/build/**',
         '/dist/**',
         '/node_modules/**',
+        '/public/**',
     ],
     root: true,
     rules: {
         'react/jsx-sort-props': 'off',
         'react/no-array-index-key': 'off',
+        'react/display-name': 'off',
     },
     settings: {
         'import/resolver': {

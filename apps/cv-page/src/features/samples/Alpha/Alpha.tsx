@@ -67,7 +67,7 @@ export const Alpha = () => {
     return (
         <Page>
             <Section title={<GradientText>Просмотр отчетов &quot;ENERGY ALPHA&quot;</GradientText>}>
-                <div className="flex flex-col rounded-sm bg-gray-800 p-6 sm:flex-row">
+                <div className="flex grow flex-col gap-2 rounded-sm bg-gray-800 p-4 sm:flex-row">
                     <div className="basis-3/4">
                         <FileName file={file} />
                         <Link
@@ -76,7 +76,7 @@ export const Alpha = () => {
                             text="Скачать пример отчёта" />
                     </div>
                     <div className="mt-6 basis-1/4 sm:mt-0">
-                        <div className="flex w-full items-center justify-center">
+                        <div className="flex w-full flex-col items-center justify-center">
                             <Dropzone
                                 acceptTypes={[REPORT_TYPE]}
                                 isLoading={isLoading}
