@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import { GradientText } from '@/shared';
+import { GradientText } from '../GradientText';
 
 type SectionProps = {
     children: ReactNode;

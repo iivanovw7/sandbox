@@ -1,4 +1,4 @@
-import type { Maybe, Nullable } from '@/shared';
+import type { Maybe, Nullable } from '@sandbox/types';
 
 export type Measurement = {
     '@_end': string;

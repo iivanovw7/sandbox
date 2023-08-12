@@ -3,8 +3,7 @@ import React from 'react';
 import { toArray } from '@/shared';
 
 import { Channel } from './Channel';
-import type { MeasuringPoint } from './model/types';
-import { sortChannelsByCode } from './model/utils';
+import { type MeasuringPoint, sortChannelsByCode } from './lib';
 
 export type MeasuringProps = MeasuringPoint;
 

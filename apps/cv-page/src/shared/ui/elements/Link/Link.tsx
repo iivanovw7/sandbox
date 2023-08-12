@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import React from 'react';
 
-import { GradientText } from './GradientText';
+import { GradientText } from '../GradientText';
 
 type LinkProps = {
     className?: string;

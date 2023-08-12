@@ -154,7 +154,7 @@ export const createPlayerStore = (): PlayerStore => {
 
     /**
      *  Current player volume level.
-     *  @returns {number} volume level.
+     *  @returns volume level.
      */
     const getVolume = () => (state.player?.getVolume() || 0) * MAX_VOLUME_RATE;
 

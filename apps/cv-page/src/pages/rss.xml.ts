@@ -1,9 +1,10 @@
 import rss from '@astrojs/rss';
+import type { AnyObject } from '@sandbox/types';
 import { getCollection } from 'astro:content';
 import MarkdownIt from 'markdown-it';
 import sanitizeHtml from 'sanitize-html';
 
-import { APP_CONFIG, type AnyObject } from '@/shared';
+import { APP_CONFIG } from '@/shared';
 
 const parser = new MarkdownIt();
 

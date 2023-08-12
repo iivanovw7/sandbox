@@ -1,9 +1,8 @@
+import type { ErrorMessage, Maybe, Pixels } from '@sandbox/types';
 import { clsx } from 'clsx';
 import React, { type ReactNode, useCallback, useMemo } from 'react';
 import type { Accept, DropzoneOptions, DropzoneState, FileError } from 'react-dropzone';
 import * as ReactDropzone from 'react-dropzone';
-
-import type { ErrorMessage, Maybe, Pixels } from '../../../types';
 
 type DropError = FileError['code'];
 // eslint-disable-next-line no-unused-vars
