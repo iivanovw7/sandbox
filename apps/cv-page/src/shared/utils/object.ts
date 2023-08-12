@@ -1,4 +1,4 @@
-import type { AnyObject } from '@/shared/types';
+import type { AnyObject } from '@sandbox/types';
 
 /*
     eslint-disable

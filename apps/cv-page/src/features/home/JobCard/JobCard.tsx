@@ -147,27 +147,27 @@ export const JobCard = () => {
                                     hidden: index !== 0 && $isLoading
                                 }
                             )}>
-                            <div className="flex flex-row items-center gap-2">
-                                <h2 className="text-xl md:text-3xl">
-                                    {! job.end && (
-                                        <span className="mr-2 text-gray-900 dark:text-gray-300">
-                                            Currently I`m working at
-                                        </span>
-                                    )}
-                                    <span>{job.company}</span>
-                                </h2>
+                            <div className="flex w-full flex-row items-start gap-2">
+                                <div className="flex flex-col">
+                                    <h2 className="text-xl md:text-3xl">
+                                        {job.company}
+                                    </h2>
+                                    <span className="text-gray-400 dark:text-gray-500">
+                                        {job.location}
+                                    </span>
+                                </div>
                                 <img
                                     alt="Avatar"
                                     className={clsx(
                                         'h-12 justify-center',
-                                        'ml-3 bg-stone-200 dark:bg-stone-900',
-                                        'p-2 md:justify-start'
+                                        'bg-stone-200 dark:bg-stone-900',
+                                        'ml-auto p-2 md:justify-start'
                                     )}
                                     loading="lazy"
                                     src={job.companyLogo} />
                             </div>
                             <div className="mt-2 flex flex-col gap-2 md:flex-row">
-                                <p className="text-lg text-gray-600 dark:text-gray-500 md:text-xl">
+                                <p className="text-lg md:text-xl">
                                     {job.position}
                                 </p>
                                 <div className="title-chip mb-2 text-lg text-stone-200 md:text-xl">
@@ -204,8 +204,7 @@ export const JobCard = () => {
                     className={clsx(
                         styles.squares,
                         'card-frame card-frame-light dark:card-frame-dark m-1 transition'
-                    )}
-                >
+                    )}>
                     <li className="bg-stone-300 dark:bg-stone-900" />
                     <li className="bg-stone-300 dark:bg-stone-900" />
                     <li className="bg-stone-300 dark:bg-stone-900" />

@@ -18,8 +18,7 @@ export const SkillCard = () => (
                 I constantly try to improve my skills.
             </h2>
             <p className="mt-4 text-xl text-gray-600 dark:text-gray-500">
-                I have a track-record of optimizing web application performance with a keen eye for detail. My
-                strong collaboration skills and my experience allows me to contribute seamlessly to any project.
+                I am interested in using my expertise to build well-constructed and user-friendly web applications
             </p>
         </div>
     </CardFrame>

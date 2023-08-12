@@ -1,7 +1,4 @@
-import { clsx } from 'clsx';
-import React, { type ReactNode } from 'react';
-
-import type { ValueOf } from '../../types';
+import React from 'react';
 
 export const ColorTags = {
     AMBER: 'AMBER',
@@ -27,12 +24,6 @@ export const ColorTags = {
     YELLOW: 'YELLOW',
     ZINC: 'ZINC',
 } as const;
-
-type ITagsProps = {
-    children: ReactNode;
-    className?: string;
-    color: ValueOf<typeof ColorTags>;
-};
 
 const colorToClassMap = {
     [ColorTags.AMBER]: 'bg-amber-400 text-amber-1200',
@@ -67,12 +58,6 @@ const blogTagsMap: Record<string, string> = {
     'linux': colorToClassMap[ColorTags.RED],
     'npm': colorToClassMap[ColorTags.SLATE],
 };
-
-export const Tags = ({ children, className, color }: ITagsProps) => (
-    <div className={clsx(`rounded-md px-2 py-1 text-xs font-semibold ${colorToClassMap[color]}`, className)}>
-        {children}
-    </div>
-);
 
 /**
  * Defines tag button color depending on word length.

@@ -3,9 +3,8 @@ import React from 'react';
 import { GradientText, type Nullable, getValues } from '@/shared';
 
 import { EnergyLabel } from './EnergyLabel';
+import { type ReportVariables, getChannelUnits, getMeasuring, sortChannelsByCode } from './lib';
 import { Measuring } from './Measuring';
-import type { ReportVariables } from './model/types';
-import { getChannelUnits, getMeasuring, sortChannelsByCode } from './model/utils';
 
 type AreaProps = {
     report?: Nullable<Record<string, string>>;

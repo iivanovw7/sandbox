@@ -1,18 +1,9 @@
+import type { AnyObject, Nullable } from '@sandbox/types';
 import { clsx } from 'clsx';
 import { XMLParser } from 'fast-xml-parser';
 import React, { useCallback, useEffect, useState } from 'react';
 
-import {
-    type AnyObject,
-    Dropzone,
-    type DropzoneProps,
-    GradientText,
-    Link,
-    type Nullable,
-    Page,
-    Section,
-    useFirstMountState
-} from '@/shared';
+import { Dropzone, type DropzoneProps, GradientText, Link, Page, Section, useFirstMountState } from '@/shared';
 
 import { ENCODING, PARSER_OPTIONS, REPORT_TYPE } from './constants';
 import { Area } from './sections/Area';

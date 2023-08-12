@@ -3,8 +3,14 @@ import React from 'react';
 import { GradientText, type Nullable, getValues, pluck } from '@/shared';
 
 import { EnergyLabel } from './EnergyLabel';
-import type { ChannelVariables, Measurement, MeasuringChannel } from './model/types';
-import { formatHours, getChannelName, getChannelUnits } from './model/utils';
+import {
+    type ChannelVariables,
+    type Measurement,
+    type MeasuringChannel,
+    formatHours,
+    getChannelName,
+    getChannelUnits
+} from './lib';
 
 export type ChannelProps = {
     channel?: Nullable<MeasuringChannel>;

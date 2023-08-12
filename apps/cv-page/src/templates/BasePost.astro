@@ -7,9 +7,9 @@ import { APP_CONFIG, type BlogCollectionEntry, Page } from '@/shared';
 import BaseTemplate from './Base.astro';
 
 const { content } = Astro.props as { content: BlogCollectionEntry };
-const { description, title } = content;
+const { description, title } = content.data;
 ---
-    <BaseTemplate head={{ description, title: `${String(title)} - ${APP_CONFIG.siteName}` }}>
+    <BaseTemplate head={{ description, title: `${title} - ${APP_CONFIG.siteName}` }}>
         <Page>
             <BlogPost content={content}>
                 <slot></slot>

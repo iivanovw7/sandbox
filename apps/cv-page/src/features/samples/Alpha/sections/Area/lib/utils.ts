@@ -1,6 +1,7 @@
 import { type Nullable, getValues, pluck, toArray } from '@/shared';
 
-import { channelMap, unitsMap } from './constants';
+import { channelMap, unitsMap } from '../constants';
+
 import type {
     ChannelTotal,
     ChannelTotalVariables,
