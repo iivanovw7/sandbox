@@ -18,7 +18,12 @@
         "lint": "pnpm eslint .",
         "stub": "pnpm unbuild --stub"
     },
+    "dependencies": {
+        "uuid": "9.0.0"
+    },
     "devDependencies": {
+        "@types/uuid": "9.0.2",
+        "@sandbox/types": "workspace:*",
         "@sandbox/ts-config": "workspace:*",
         "@sandbox/eslint-config": "workspace:*",
         "unbuild": "1.2.1"
