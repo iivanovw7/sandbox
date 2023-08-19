@@ -12,9 +12,8 @@ This repository includes the following packages and apps:
 
 ### Apps
 
-- `cv-app` [qwik](https://qwik.builder.io) contacts page.
-- `cv-page` astro [website](apps/cv-page/README.md).
-- `player-app` ott player web [app]().
+- `cv-app` astro [website](apps/cv-app/README.md).
+- `player-app` ott player web [app](apps/player-app/README.md).
 
 ### Requirements
 
